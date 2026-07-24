@@ -64,7 +64,7 @@ body{font-size:18px}.section-intro{font-size:17px}.definition-copy p,.tp-info>p{
 /* 카드·단계·사례의 항목명 확대 */
 .subhead{font-size:20px}.level-card h4,.story-step b,.journey-stage h3,.choice-panel h3{font-size:17px}.tp-info h3{font-size:20px}.case-title,.pname,.tech-title{font-size:16px}.driver-title,.ideal-card h4{font-size:16px}.gl-term{font-size:13px}.sk{font-size:11px}.tt,.fb{font-size:13px}.company-body h3{font-size:22px}
 /* 당사 추진 현황: 상세 자료 및 이미지를 위한 준비 영역 */
-.company-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.company-card{overflow:hidden;border:1px solid var(--border);border-radius:12px;background:#fff}.company-visual{height:210px;display:flex;align-items:center;justify-content:center;text-align:center;border-bottom:1px dashed var(--border2);background:repeating-linear-gradient(45deg,#fff,#fff 12px,#fff7f7 12px,#fff7f7 24px);color:var(--muted)}.company-visual span{font:700 12px/1.8 "Space Mono";letter-spacing:.06em}.company-body{padding:20px}.company-tag{display:inline-block;margin-bottom:8px;color:var(--accent);font:700 10px "Space Mono";letter-spacing:.08em}.company-body h3{font-size:20px;margin-bottom:7px}.company-body p{font-size:16px;color:var(--muted)}
+.company-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.company-card{overflow:hidden;border:1px solid var(--border);border-radius:12px;background:#fff}.company-image-wrap{height:210px;overflow:hidden;border-bottom:1px solid var(--border)}.company-image-wrap img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .35s}.company-card:hover .company-image-wrap img{transform:scale(1.025)}.company-body{padding:20px}.company-tag{display:inline-block;margin-bottom:8px;color:var(--accent);font:700 10px "Space Mono";letter-spacing:.08em}.company-body h3{font-size:20px;margin-bottom:7px}.company-body p{font-size:16px;color:var(--muted)}
 @media(max-width:700px){.company-grid{grid-template-columns:1fr}.company-visual{height:180px}}
 </style>
 </head>
@@ -201,8 +201,8 @@ body{font-size:18px}.section-intro{font-size:17px}.definition-copy p,.tp-info>p{
   <article class="card reveal"><div class="card-top-line"></div><div class="card-body">
     <p class="section-intro">당사 추진 과제의 상세 내용과 참고 이미지는 추후 추가합니다.</p>
     <div class="company-grid" aria-label="당사 추진 현황 과제">
-      <article class="company-card"><div class="company-visual"><span>IMAGE / DASHBOARD<br>TO BE ADDED</span></div><div class="company-body"><span class="company-tag">INITIATIVE 01</span><h3>3D 비주얼라이저 대시보드</h3><p>상세 내용 및 참고 이미지 추후 반영</p></div></article>
-      <article class="company-card"><div class="company-visual"><span>IMAGE / PROJECT<br>TO BE ADDED</span></div><div class="company-body"><span class="company-tag">INITIATIVE 02</span><h3>Wcraft</h3><p>상세 내용 및 참고 이미지 추후 반영</p></div></article>
+      <article class="company-card"><div class="company-image-wrap"><img loading="lazy" src="3d 비주얼라이저 대시보드.png" alt="3D 비주얼라이저 물류센터 대시보드 화면"></div><div class="company-body"><span class="company-tag">INITIATIVE 01</span><h3>3D 비주얼라이저 대시보드</h3><p>상세 내용 및 참고 이미지 추후 반영</p></div></article>
+      <article class="company-card"><div class="company-image-wrap"><img loading="lazy" src="wcraft.jpg" alt="Wcraft 글로벌 운영 화면"></div><div class="company-body"><span class="company-tag">INITIATIVE 02</span><h3>Wcraft</h3><p>상세 내용 및 참고 이미지 추후 반영</p></div></article>
     </div>
   </div></article>
 </section>
