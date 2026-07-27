@@ -214,7 +214,6 @@ body{font-size:18px}.section-intro{font-size:17px}.definition-copy p,.tp-info>p{
   <div class="sec-tag"><span class="sec-num">APPENDIX</span>주요 업체</div>
   <article class="card reveal"><div class="card-top-line"></div><div class="card-body">
     <p class="section-intro">디지털 트윈은 한 회사의 제품 하나만 설치해서 완성되는 기술이 아닙니다. <strong>현실 데이터를 연결하는 회사, 가상 실험을 만드는 회사, 로봇·자동화 설비를 공급하는 회사</strong>가 함께 참여합니다. CI가 표시된 카드를 분야별로 골라보세요.</p>
-    <div class="filter-row" aria-label="업체 분야 필터"><button class="fb vendor-filter active" data-vendor="all">전체</button><button class="fb vendor-filter" data-vendor="platform">산업 플랫폼</button><button class="fb vendor-filter" data-vendor="simulation">시뮬레이션</button><button class="fb vendor-filter" data-vendor="robotics">3D·로보틱스</button><button class="fb vendor-filter" data-vendor="logistics">물류·자동화</button><button class="fb vendor-filter" data-vendor="korea">국내</button></div>
     <div class="player-grid" id="vendorGrid">
       <article class="p-card" data-vendor-type="platform logistics"><div class="vendor-logo"><img loading="lazy" src="https://cdn.simpleicons.org/siemens/009999" alt="Siemens CI"><span class="wordmark">SIEMENS</span></div><div class="pname">Siemens</div><div class="ptype">산업 플랫폼 · 물류</div><div class="pprod">Xcelerator · Plant Simulation · Digital Logistics</div><div class="pflag">공장과 물류센터 전체를 연결</div><div class="phide">설계, 자동화 제어, 물류 흐름 시뮬레이션을 폭넓게 연결합니다.<sup>[3][8]</sup></div></article>
       <article class="p-card" data-vendor-type="robotics platform"><div class="vendor-logo"><img loading="lazy" src="https://cdn.simpleicons.org/nvidia/76B900" alt="NVIDIA CI"><span class="wordmark">NVIDIA</span></div><div class="pname">NVIDIA</div><div class="ptype">3D · 로봇 AI</div><div class="pprod">Omniverse · Isaac Sim · Mega</div><div class="pflag">가상 창고에서 로봇을 학습·시험</div><div class="phide">물리적으로 사실적인 가상공간과 센서 데이터를 이용해 로봇의 AI를 현실 투입 전에 검증합니다.<sup>[7][13]</sup></div></article>
@@ -269,11 +268,6 @@ document.querySelectorAll('.tt').forEach(btn=>btn.addEventListener('click',()=>{
   document.querySelectorAll('.tt').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false')});
   document.querySelectorAll('.type-panel').forEach(p=>p.classList.remove('active'));
   btn.classList.add('active');btn.setAttribute('aria-selected','true');byId('panel-'+btn.dataset.panel).classList.add('active');
-}));
-
-document.querySelectorAll('.vendor-filter').forEach(btn=>btn.addEventListener('click',()=>{
-  document.querySelectorAll('.vendor-filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
-  document.querySelectorAll('#vendorGrid .p-card').forEach(card=>card.classList.toggle('hidden',btn.dataset.vendor!=='all'&&!card.dataset.vendorType.split(' ').includes(btn.dataset.vendor)));
 }));
 
 const qdata=[

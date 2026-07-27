@@ -214,7 +214,6 @@ body{font-size:18px}.section-intro{font-size:17px}.definition-copy p,.tp-info>p{
   <div class="sec-tag"><span class="sec-num">APPENDIX</span>Key Vendors</div>
   <article class="card reveal"><div class="card-top-line"></div><div class="card-body">
     <p class="section-intro">A digital twin is not completed by installing a single product from one company. <strong>Companies that connect physical data, build virtual experiments, and supply robots and automation equipment</strong> all contribute. Use the filters to explore vendors by category.</p>
-    <div class="filter-row" aria-label="Vendor category filters"><button class="fb vendor-filter active" data-vendor="all">All</button><button class="fb vendor-filter" data-vendor="platform">Industrial Platform</button><button class="fb vendor-filter" data-vendor="simulation">Simulation</button><button class="fb vendor-filter" data-vendor="robotics">3D & Robotics</button><button class="fb vendor-filter" data-vendor="logistics">Logistics & Automation</button><button class="fb vendor-filter" data-vendor="korea">Korea</button></div>
     <div class="player-grid" id="vendorGrid">
       <article class="p-card" data-vendor-type="platform logistics"><div class="vendor-logo"><img loading="lazy" src="https://cdn.simpleicons.org/siemens/009999" alt="Siemens CI"><span class="wordmark">SIEMENS</span></div><div class="pname">Siemens</div><div class="ptype">Industrial Platform · Logistics</div><div class="pprod">Xcelerator · Plant Simulation · Digital Logistics</div><div class="pflag">Connect factories and warehouses end to end</div><div class="phide">Connect design, automation control, and logistics-flow simulation across the enterprise.<sup>[3][8]</sup></div></article>
       <article class="p-card" data-vendor-type="robotics platform"><div class="vendor-logo"><img loading="lazy" src="https://cdn.simpleicons.org/nvidia/76B900" alt="NVIDIA CI"><span class="wordmark">NVIDIA</span></div><div class="pname">NVIDIA</div><div class="ptype">3D · Robotics AI</div><div class="pprod">Omniverse · Isaac Sim · Mega</div><div class="pflag">Train and test robots in virtual warehouses</div><div class="phide">Use physically realistic virtual environments and sensor data to validate robot AI before real deployment.<sup>[7][13]</sup></div></article>
@@ -269,11 +268,6 @@ document.querySelectorAll('.tt').forEach(btn=>btn.addEventListener('click',()=>{
   document.querySelectorAll('.tt').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false')});
   document.querySelectorAll('.type-panel').forEach(p=>p.classList.remove('active'));
   btn.classList.add('active');btn.setAttribute('aria-selected','true');byId('panel-'+btn.dataset.panel).classList.add('active');
-}));
-
-document.querySelectorAll('.vendor-filter').forEach(btn=>btn.addEventListener('click',()=>{
-  document.querySelectorAll('.vendor-filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
-  document.querySelectorAll('#vendorGrid .p-card').forEach(card=>card.classList.toggle('hidden',btn.dataset.vendor!=='all'&&!card.dataset.vendorType.split(' ').includes(btn.dataset.vendor)));
 }));
 
 const qdata=[
